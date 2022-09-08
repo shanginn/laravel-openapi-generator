@@ -1,0 +1,34 @@
+module.exports = {
+  base: '/laravel-openapi/',
+  title: 'Laravel OpenAPI',
+  description: 'Generate OpenAPI specification for Laravel Applications',
+  themeConfig: {
+    nav: [
+      {text: 'Home', link: '/'},
+      {text: 'GitHub', link: 'http://github.com/shanginn/laravel-openapi'},
+      {
+        text: 'Packagist',
+        link: 'https://packagist.org/packages/shanginn/laravel-openapi',
+      },
+    ],
+    sidebar: [
+      '/',
+      {
+        title: 'Paths',
+        collapsable: false,
+        children: [
+          '/paths/operations',
+          '/paths/parameters',
+          '/paths/request-bodies',
+          '/paths/responses',
+        ],
+      },
+      '/schemas',
+      '/collections',
+      '/middlewares',
+      '/security'
+    ],
+    displayAllHeaders: true,
+    sidebarDepth: 2,
+  },
+};

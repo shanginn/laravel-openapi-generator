@@ -1,0 +1,61 @@
+{
+    "name": "shanginn/laravel-openapi",
+    "description": "Generate OpenAPI Specification for Laravel Applications",
+    "version": "3.0.0",
+    "keywords": [
+        "laravel",
+        "openapi",
+        "api",
+        "documentation",
+        "docs",
+        "rest",
+        "swagger"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikolai Shangin",
+            "email": "shanginn@gmail.com"
+        },
+        {
+            "name": "Vladimir Yuldashev",
+            "email": "misterio92@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "doctrine/dbal": "^2.6|^3.0",
+        "goldspecdigital/oooas": "^2.7.1",
+        "laravel/framework": "5.8.*|^6.0|^7.0|^8.0|^9.0",
+        "phpdocumentor/reflection-docblock": "^5.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.3|^6.0|^7.0",
+        "phpunit/phpunit": "^9.5.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shanginn\\LaravelOpenApi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Shanginn\\LaravelOpenApi\\Tests\\": "tests/",
+            "Examples\\Petstore\\": "examples/petstore/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shanginn\\LaravelOpenApi\\OpenApiServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
